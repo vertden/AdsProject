@@ -15,11 +15,17 @@
 
 <body>
 <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h5 class="my-0 mr-md-auto font-weight-normal"><%= t(".home_page") %></h5>
+  <h5 class="my-0 mr-md-auto font-weight-normal"><%= link_to t(".home_page"), home_path %></h5>
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark" href="#"><%= t(".create_ad") %></a>
+    <% if user_signed_in? %>
+      <%= link_to t(".profile"), profile_path, {:class => "p-2 text-dark"} %>
+
+      <%= link_to t(".sign_out"), destroy_user_session_path, {:class => "btn btn-outline-danger", :method => :delete} %>
+    <% else %>
+      <%= link_to t(".log_in"), new_user_session_path, {:class => "btn btn-outline-primary"} %>
+    <% end %>
   </nav>
-  <%= link_to t(".log_in"), new_user_session_path, {:class => "btn btn-outline-primary"} %>
 </div>
 
 <div class="container">

@@ -5,7 +5,8 @@ ruby '2.6.3'
 
 gem 'devise'
 gem 'enumerize'
-gem "cancan"
+gem 'cancan'
+gem 'carrierwave', '~> 2.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.3'
 # Use mysql as the database for Active Record
