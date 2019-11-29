@@ -8,7 +8,7 @@
 #
 # In views, this is aliased to just `t`:
 #
-#     <%= t('hello') %>
+#     <%#= t('hello') %>
 #
 # To use a different locale, set it with `I18n.locale`:
 #
@@ -30,4 +30,26 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title: "Ads Project"
+      home_page: "Home page"
+      create_ad: "Create ad"
+      log_in: "log in"
+      sign_out: "sing out"
+      profile: "Profile"
+
+  profiles:
+    show:
+      title: "My profile"
+      edit: "Edit"
+      edit_password: "Edit password"
+    edit:
+      title: "Settings"
+      first_name: "First name"
+      second_name: "Second name"
+      avatar: "Avatar"
+      submit: "Update"
+
+
+
