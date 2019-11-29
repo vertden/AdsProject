@@ -30,4 +30,14 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  layouts:
+    application:
+      title: "Ads Project"
+      home_page: "Home page"
+      create_ad: "Create ad"
+
+
+
+
+
+
