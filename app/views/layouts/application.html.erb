@@ -19,7 +19,11 @@
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-2 text-dark" href="#"><%= t(".create_ad") %></a>
   </nav>
-  <a class="btn btn-outline-primary" href="#">Sign up</a>
+  <%= link_to t(".log_in"), new_user_session_path, {:class => "btn btn-outline-primary"} %>
+</div>
+
+<div class="container">
+  <%= yield %>
 </div>
 <footer class="my-5 pt-5 ">
   <hr>
@@ -27,8 +31,5 @@
     <p class="mb-1">&copy; 2019 Ads</p>
   </div>
 </footer>
-
-</div>
-<%= yield %>
 </body>
 </html>
