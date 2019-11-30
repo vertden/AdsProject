@@ -1,0 +1,5 @@
+<h2><%= t('.head') %></h2>
+<%= javascript_include_tag "nested_form" %>
+<%= form_for :ad, html: {miltipart: true}, url: ads_path do |f| %>
+  <%= render "form" %>
+<% end %>

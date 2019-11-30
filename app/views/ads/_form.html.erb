@@ -1,0 +1,12 @@
+<%= simple_form_for(@ad, html: {class: 'form-inline'}) do |form| %>
+  <%= form.input :body %>
+  <%= form.input :type_id, collection: @types, default: @types.first %>
+  <%= nested_form_for(@ad, html: {class: 'form-inline'}) do |nested| %>
+    <%= nested.fields_for :images do |image| %>
+        <%= image.file_field :name %>
+        <%= image.link_to_remove "Remove this image" %>
+    <% end %>
+    <p><%= nested.link_to_add "Add new image", :images %></p>
+    <%= form.button :submit, class: 'btn btn-success' %>
+  <% end %>
+<% end %>

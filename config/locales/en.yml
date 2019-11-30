@@ -39,6 +39,18 @@ en:
       sign_out: "sing out"
       profile: "Profile"
 
+  ads:
+#    index:
+#    show:
+    new:
+      head: "Create ad"
+      body: "Text"
+      type: "Type"
+      image: "Image"
+      submit: "Create"
+#    edit:
+
+
   profiles:
     show:
       title: "My profile"

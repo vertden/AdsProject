@@ -1,8 +1,9 @@
 class User < ApplicationRecord
+  has_many :ads
   mount_uploader :avatar, AvatarUploader
   extend Enumerize
-
   enumerize :role, in: [:user, :admin], default: :user
+
 
   validates :first_name, presence: false, allow_blank: true, length: {minimum: 1}
   validates :second_name, presence: false, allow_blank: true, length: {minimum: 1}
