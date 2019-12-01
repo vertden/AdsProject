@@ -1,0 +1,7 @@
+<div class="card-header">
+  <h4 class="my-0 font-weight-normal"><%= ad.type.name %></h4>
+</div>
+<div class="card-body">
+  <p style="text-overflow: ellipsis;"><%= (ad.body.html_safe).truncate_words(20) %></p>
+</div>
+<%= link_to t('ads.index.show_more'), ad_path(ad), style: 'bottom: 0;', class: 'btn btn-lg btn-block btn-primary mb-4' %>

@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <%= @ad.body %>
+      <%= @ad.images.find_each do |image| %>
+        <%= image.name %>
+        <%#= image_tag image.name.url %>
+      <% end %>
+    </div>
+  </div>
+</div>

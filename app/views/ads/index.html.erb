@@ -1,0 +1,8 @@
+<div class="card-deck mb-3 text-center">
+  <%= @ads.find_each do |ad| %>
+    <div class="card mb-4 shadow-sm">
+      <%= render "ad", ad: ad %>
+    </div>
+  <% end %>
+</div>
+<%= will_paginate @ads %>
