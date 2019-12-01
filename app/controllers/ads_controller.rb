@@ -1,6 +1,6 @@
 class AdsController < ApplicationController
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new,:create,:edit,:update,:destroy,:show_user_ads]
+  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :show_user_ads]
 
   def index
     @ads = Ad.all.paginate(:per_page => 3, :page => params[:page])
@@ -57,8 +57,9 @@ class AdsController < ApplicationController
   def ad_params
     params.require(:ad).permit(:body,
                                :image,
+                               :status,
                                :type_id,
-                               :images_attributes => [:name, :_destroy,:id])
+                               :images_attributes => [:name, :_destroy, :id])
   end
 
 end
