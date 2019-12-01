@@ -5,7 +5,7 @@ ruby '2.6.3'
 
 gem 'devise'
 gem 'enumerize'
-gem 'cancan'
+gem 'cancancan'
 gem 'carrierwave', '~> 2.0'
 gem 'simple_form'
 gem "nested_form"
