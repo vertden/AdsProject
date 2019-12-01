@@ -31,6 +31,7 @@ RSpec.describe AdsController, type: :controller do
     end
     it "redirects to home if ad saved" do
       post :create, params: {ad: {body: "Some text",
+                                  status: "draft",
                                   type_id: 1},
                              images_attributes: {"0" => {name: "", _destroy: "false"}}}
       expect(response).to redirect_to(home_path)
@@ -55,6 +56,7 @@ RSpec.describe AdsController, type: :controller do
     end
     it "redirects to home if ad updated" do
       put :update, params: {ad: {body: "Some new text",
+                                 status: "draft",
                                  type_id: 1},
                             images_attributes: {"0" => {name: "", _destroy: "false"}},
                             id: ad.id}
