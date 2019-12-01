@@ -47,6 +47,7 @@ en:
     show_user_ads:
       edit: "Edit"
       destroy: "Destroy"
+      status: "Status: %{status}"
     new:
       add_image: "Add new image"
       remove_image: "Remove this image"

@@ -1,11 +1,14 @@
 <div class="card-deck mb-3 text-center">
   <%= @ads.find_each do |ad| %>
     <div class="card mb-4 shadow-sm">
-      <%= link_to t(".edit"), ad_path(ad) %>
-      <%= link_to t(".destroy"), ad_path(ad),
-                  {style: 'color: red', method: :delete,
-                   data: {confirm: t("confirmation")}} %>
+      <div>
+        <%= link_to t(".edit"), ad_path(ad) if ad.status.draft? %>
+        <%= link_to t(".destroy"), ad_path(ad),
+                    {style: 'color: red', method: :delete,
+                     data: {confirm: t("confirmation")}} %>
+      </div>
       <%= render "ad", ad: ad %>
+      <h5 class=<%= get_class(ad) %>><%= t(".status",status:ad.status) %></h5>
     </div>
   <% end %>
 </div>
