@@ -4,9 +4,9 @@
   <%= nested_form_for(@ad, html: {class: 'form-inline'}) do |nested| %>
     <%= nested.fields_for :images do |image| %>
         <%= image.file_field :name %>
-        <%= image.link_to_remove "Remove this image" %>
+        <%= image.link_to_remove t("ads.new.remove_image") %>
     <% end %>
-    <p><%= nested.link_to_add "Add new image", :images %></p>
+    <p><%= nested.link_to_add t("ads.new.add_image"), :images %></p>
     <%= form.button :submit, class: 'btn btn-success' %>
   <% end %>
 <% end %>

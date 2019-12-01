@@ -3,7 +3,7 @@ class AdsController < ApplicationController
   before_action :authenticate_user!, only: [:new,:create,:edit,:update,:destroy]
 
   def index
-
+    @ads = Ad.all.paginate(:per_page => 3, :page => params[:page])
   end
 
   def show

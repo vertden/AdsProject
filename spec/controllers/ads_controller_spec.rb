@@ -1,6 +1,12 @@
 require 'rails_helper'
 
 RSpec.describe AdsController, type: :controller do
+  context "#index" do
+    it "returns a success index response" do
+      get :index
+      expect(response).to be_successful
+    end
+  end
   context "#new" do
     it "should render new page" do
       @user = User.first

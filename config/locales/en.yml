@@ -40,17 +40,13 @@ en:
       profile: "Profile"
 
   ads:
-#    index:
+    index:
+      show_more: "Show more"
 #    show:
     new:
-      head: "Create ad"
-      body: "Text"
-      type: "Type"
-      image: "Image"
-      submit: "Create"
+      add_image: "Add new image"
+      remove_image: "Remove this image"
 #    edit:
-
-
   profiles:
     show:
       title: "My profile"
