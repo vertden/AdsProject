@@ -43,7 +43,8 @@ en:
   ads:
     index:
       show_more: "Show more"
-#    show:
+      destroy: "Destroy"
+    #    show:
     show_user_ads:
       edit: "Edit"
       destroy: "Destroy"
@@ -66,5 +67,6 @@ en:
       submit: "Update"
 
   confirmation: "Are you sure?"
+  access_denied: "Access denied."
 
 

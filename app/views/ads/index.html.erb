@@ -1,6 +1,11 @@
 <div class="card-deck mb-3 text-center">
   <%= @ads.find_each do |ad| %>
     <div class="card mb-4 shadow-sm">
+      <div>
+        <%= link_to t(".destroy"), ad_path(ad),
+                    {style: 'color: red', method: :delete,
+                     data: {confirm: t("confirmation")}} if can? :destroy, ad %>
+      </div>
       <%= render "ad", ad: ad %>
     </div>
   <% end %>

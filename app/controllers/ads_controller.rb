@@ -1,7 +1,6 @@
 class AdsController < ApplicationController
+  load_and_authorize_resource
   before_action :set_ad, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :create, :edit, :update, :destroy, :show_user_ads]
-
   def index
     @ads = Ad.all.paginate(:per_page => 3, :page => params[:page])
   end
@@ -32,6 +31,9 @@ class AdsController < ApplicationController
   end
 
   def edit
+    unless @ad.status.draft?
+      redirect_to home_path
+    end
     @types = Type.all
   end
 
