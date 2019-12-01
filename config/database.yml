@@ -45,10 +45,9 @@ test:
 # You can use this database configuration with:
 #
 #   production:
-#     url: <%= ENV['DATABASE_URL'] %>
+#     url: <%#= ENV['DATABASE_URL'] %>
 #
 production:
   <<: *default
-  database: AdsProject_production
-  username: AdsProject
-  password: <%= ENV['ADSPROJECT_DATABASE_PASSWORD'] %>
+  adapter: mysql2
+  url: <%= ENV['DATABASE_URL'] %>
