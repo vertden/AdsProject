@@ -7,7 +7,7 @@ class AdsController < ApplicationController
   end
 
   def show
-
+    @images = @ad.images
   end
 
   def new

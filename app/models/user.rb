@@ -1,6 +1,6 @@
 class User < ApplicationRecord
   has_many :ads
-  mount_uploader :avatar, AvatarUploader
+  mount_uploader :avatar, ImageUploader
   extend Enumerize
   enumerize :role, in: [:user, :admin], default: :user
 
