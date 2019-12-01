@@ -1,4 +1,4 @@
-<%= simple_form_for(@ad, html: {class: 'form-inline'}) do |form| %>
+<%= simple_form_for(@ad) do |form| %>
   <%= form.input :body %>
   <%= form.input :type_id, collection: @types, default: @types.first %>
   <%= nested_form_for(@ad, html: {class: 'form-inline'}) do |nested| %>

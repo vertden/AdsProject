@@ -34,7 +34,8 @@ en:
     application:
       title: "Ads Project"
       home_page: "Home page"
-      create_ad: "Create ad"
+      my_ads: "My Ads"
+      create_ad: "Create Ad"
       log_in: "log in"
       sign_out: "sing out"
       profile: "Profile"
@@ -43,10 +44,14 @@ en:
     index:
       show_more: "Show more"
 #    show:
+    show_user_ads:
+      edit: "Edit"
+      destroy: "Destroy"
     new:
       add_image: "Add new image"
       remove_image: "Remove this image"
-#    edit:
+    edit:
+      head: "Edit ad"
   profiles:
     show:
       title: "My profile"
@@ -59,5 +64,6 @@ en:
       avatar: "Avatar"
       submit: "Update"
 
+  confirmation: "Are you sure?"
 
 
