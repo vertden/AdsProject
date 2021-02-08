@@ -6,7 +6,7 @@ ruby '2.6.3'
 gem 'devise'
 gem 'enumerize'
 gem 'cancancan'
-gem 'carrierwave', '~> 2.0'
+gem 'carrierwave', '~> 2.1'
 gem 'simple_form'
 gem "nested_form"
 gem 'will_paginate', '~> 3.1.0'
